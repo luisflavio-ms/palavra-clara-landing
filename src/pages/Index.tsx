@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Quote, CheckCircle2 } from "lucide-react";
+import { Quote, CheckCircle2, MousePointerClick, CreditCard, Mail, Download } from "lucide-react";
 import { onBuy } from "@/lib/utils";
 import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { usePurchaseNotifications } from "@/hooks/usePurchaseNotifications";
@@ -120,8 +120,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof Section */}
+      {/* How It Works Section */}
       <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Como Funciona?</h2>
+            <p className="text-xl text-muted-foreground">
+              Simples, rápido e 100% digital
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 text-center bg-card hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MousePointerClick className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold text-primary mb-4">1</div>
+              <h3 className="text-xl font-semibold mb-3">Clique em "Adquirir Agora"</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Escolha sua forma de pagamento preferida em nossa página segura.
+              </p>
+            </Card>
+
+            <Card className="p-8 text-center bg-card hover:shadow-lg transition-all duration-300 md:scale-105">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CreditCard className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold text-primary mb-4">2</div>
+              <h3 className="text-xl font-semibold mb-3">Finalize o Pagamento</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Pagamento 100% seguro via cartão de crédito, PIX ou boleto.
+              </p>
+            </Card>
+
+            <Card className="p-8 text-center bg-card hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Mail className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold text-primary mb-4">3</div>
+              <h3 className="text-xl font-semibold mb-3">Receba Instantaneamente</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Em segundos, você recebe no seu email o link para download dos esboços.
+              </p>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="p-6 bg-primary/5 border-primary/20 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Download className="w-6 h-6 text-primary" />
+                <p className="font-semibold text-lg">Acesso Imediato e Vitalício</p>
+              </div>
+              <p className="text-muted-foreground">
+                Baixe quantas vezes quiser, quando quiser. Os materiais são seus para sempre!
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
