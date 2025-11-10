@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Quote, CheckCircle2 } from "lucide-react";
 import { onBuy } from "@/lib/utils";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
+import { usePurchaseNotifications } from "@/hooks/usePurchaseNotifications";
 import heroBible from "@/assets/hero-bible.jpg";
 import iconBook from "@/assets/icon-book.png";
 import iconPray from "@/assets/icon-pray.png";
@@ -10,12 +12,16 @@ import iconSpeed from "@/assets/icon-speed.png";
 import iconDove from "@/assets/icon-dove.png";
 
 const Index = () => {
+  usePurchaseNotifications();
+  
   const scrollToCTA = () => {
     document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen">
+      <UrgencyBanner />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
@@ -220,11 +226,14 @@ const Index = () => {
               Comece hoje mesmo sua jornada de crescimento espiritual e ensino bíblico de excelência.
             </p>
 
-            <div className="bg-card p-8 rounded-2xl shadow-[0_10px_40px_-10px_hsl(30_20%_20%/0.15)] mb-8">
+            <div className="bg-card p-8 rounded-2xl shadow-[0_10px_40px_-10px_hsl(30_20%_20%/0.15)] mb-8 border-2 border-primary/20">
               <div className="mb-6">
+                <div className="bg-primary/10 text-primary font-bold py-2 px-4 rounded-lg mb-4 inline-block">
+                  ⚡ PROMOÇÃO VÁLIDA SOMENTE HOJE!
+                </div>
                 <span className="text-muted-foreground line-through text-2xl">R$ 49,90</span>
                 <div className="text-5xl font-bold text-primary mt-2">R$ 14,90</div>
-                <p className="text-sm text-muted-foreground mt-2">Oferta especial por tempo limitado</p>
+                <p className="text-sm text-muted-foreground mt-2">Oferta especial termina hoje às 23:59</p>
               </div>
 
               <Button variant="hero" size="xl" onClick={onBuy} className="w-full md:w-auto text-lg">
