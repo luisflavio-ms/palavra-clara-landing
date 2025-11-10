@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Quote, CheckCircle2 } from "lucide-react";
+import { onBuy } from "@/lib/utils";
 import heroBible from "@/assets/hero-bible.jpg";
 import iconBook from "@/assets/icon-book.png";
 import iconPray from "@/assets/icon-pray.png";
@@ -33,7 +34,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl mb-8 text-white/95 font-light">
               Mais de 100 esboços bíblicos prontos para estudos, pregações e devocionais.
             </p>
-            <Button variant="hero" size="xl" onClick={scrollToCTA} className="text-lg">
+            <Button variant="hero" size="xl" onClick={onBuy} className="text-lg">
               Quero Meu Pacote Agora
             </Button>
             <p className="mt-6 text-white/80 text-sm">Acesso imediato após a compra</p>
@@ -190,7 +191,7 @@ const Index = () => {
               </div>
 
               <div className="mt-10 text-center">
-                <Button variant="hero" size="xl" onClick={scrollToCTA}>
+                <Button variant="hero" size="xl" onClick={onBuy}>
                   Baixar Agora
                 </Button>
               </div>
@@ -226,7 +227,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mt-2">Oferta especial por tempo limitado</p>
               </div>
 
-              <Button variant="hero" size="xl" className="w-full md:w-auto text-lg">
+              <Button variant="hero" size="xl" onClick={onBuy} className="w-full md:w-auto text-lg">
                 Adquirir Agora
               </Button>
 
