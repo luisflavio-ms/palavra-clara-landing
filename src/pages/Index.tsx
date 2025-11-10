@@ -33,12 +33,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl mb-8 text-white/95 font-light">
               Mais de 100 esboços bíblicos prontos para estudos, pregações e devocionais.
             </p>
-            <Button 
-              variant="hero" 
-              size="xl" 
-              onClick={scrollToCTA}
-              className="text-lg"
-            >
+            <Button variant="hero" size="xl" onClick={scrollToCTA} className="text-lg">
               Quero Meu Pacote Agora
             </Button>
             <p className="mt-6 text-white/80 text-sm">Acesso imediato após a compra</p>
@@ -66,9 +61,7 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Tudo o Que Você Precisa para Crescer na Fé
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Tudo o Que Você Precisa para Crescer na Fé</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Recursos completos para aprofundar seus estudos bíblicos
             </p>
@@ -111,15 +104,9 @@ const Index = () => {
                 key={index}
                 className="p-8 hover:shadow-[0_4px_20px_-4px_hsl(30_20%_20%/0.15)] transition-all duration-300 border-border/50"
               >
-                <img
-                  src={benefit.icon}
-                  alt={benefit.title}
-                  className="w-16 h-16 mx-auto mb-4"
-                />
+                <img src={benefit.icon} alt={benefit.title} className="w-16 h-16 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-3 text-center">{benefit.title}</h3>
-                <p className="text-muted-foreground text-center leading-relaxed">
-                  {benefit.description}
-                </p>
+                <p className="text-muted-foreground text-center leading-relaxed">{benefit.description}</p>
               </Card>
             ))}
           </div>
@@ -133,9 +120,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Milhares de Cristãos Já Estão Estudando com Mais Profundidade!
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Veja o que nossos membros estão dizendo
-            </p>
+            <p className="text-lg text-muted-foreground">Veja o que nossos membros estão dizendo</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -160,19 +145,13 @@ const Index = () => {
                 <div className="mb-4">
                   <div className="flex text-primary mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-5 h-5 fill-current"
-                        viewBox="0 0 20 20"
-                      >
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                 </div>
-                <p className="text-foreground/90 mb-4 italic leading-relaxed">
-                  "{testimonial.text}"
-                </p>
+                <p className="text-foreground/90 mb-4 italic leading-relaxed">"{testimonial.text}"</p>
                 <div className="border-t pt-4">
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -188,12 +167,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                O Que Você Vai Receber
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Um pacote completo para transformar seus estudos
-              </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">O Que Você Vai Receber</h2>
+              <p className="text-xl text-muted-foreground">Um pacote completo para transformar seus estudos</p>
             </div>
 
             <Card className="p-8 md:p-12">
@@ -239,24 +214,22 @@ const Index = () => {
       <section id="cta-section" className="py-20 bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Fortaleça Sua Fé e Leve a Palavra com Poder
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Fortaleça Sua Fé e Leve a Palavra com Poder</h2>
             <p className="text-xl text-muted-foreground mb-10">
               Comece hoje mesmo sua jornada de crescimento espiritual e ensino bíblico de excelência.
             </p>
-            
+
             <div className="bg-card p-8 rounded-2xl shadow-[0_10px_40px_-10px_hsl(30_20%_20%/0.15)] mb-8">
               <div className="mb-6">
-                <span className="text-muted-foreground line-through text-2xl">R$ 197,00</span>
-                <div className="text-5xl font-bold text-primary mt-2">R$ 97,00</div>
+                <span className="text-muted-foreground line-through text-2xl">R$ 49,90</span>
+                <div className="text-5xl font-bold text-primary mt-2">R$ 14,90</div>
                 <p className="text-sm text-muted-foreground mt-2">Oferta especial por tempo limitado</p>
               </div>
-              
+
               <Button variant="hero" size="xl" className="w-full md:w-auto text-lg">
                 Adquirir Agora
               </Button>
-              
+
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
@@ -280,12 +253,8 @@ const Index = () => {
       <footer className="bg-foreground/5 py-12 border-t">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg font-semibold mb-4 text-foreground">
-              Pacote de Esboços Bíblicos
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Pagamento Seguro | Acesso Imediato | Suporte Rápido
-            </p>
+            <p className="text-lg font-semibold mb-4 text-foreground">Pacote de Esboços Bíblicos</p>
+            <p className="text-muted-foreground mb-6">Pagamento Seguro | Acesso Imediato | Suporte Rápido</p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">
                 Política de Privacidade
